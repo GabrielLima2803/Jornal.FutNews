@@ -1,0 +1,369 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>FutNews</title>
+    <link rel="stylesheet" href="scrollbar.css">
+    <link rel="shortcut icon" href="android-chrome-192x192.png" type="image/x-icon">
+    <link rel="stylesheet" href="button.js">
+    <link rel="stylesheet" href="teste.css">
+    <style>
+        body {
+            margin: 0%;
+            font-family: 'Fjalla One', sans-serif;
+            font-family: 'Kanit', sans-serif;
+
+        }
+
+        header {
+            background-color: #f03232;
+            position: relative;
+            border: 5px solid black;
+            height: 100px;
+            overflow: hidden;
+
+        }
+
+        #Titulo {
+            text-align: center;
+            font-size: 30px;
+            padding-top: 10px;
+            padding-left: 15px;
+            font-size: 80px;
+            letter-spacing: 10px;
+            font-family: 'Fjalla One', sans-serif;
+            font-family: 'Kanit', sans-serif;
+
+
+        }
+
+        .nav-central {
+            display: grid;
+            grid-template-columns: 100%;
+            background-color: rgb(31, 30, 30);
+            position: sticky;
+            top: 0px;
+            font-size: 30px;
+            font-family: 'Mochiy Pop One', sans-serif;
+            border-bottom: white 1px solid;
+
+        }
+
+        .link1 {
+
+            color: white;
+            padding: 5px;
+            text-decoration: none;
+            transition: 0.9s;
+            margin-left: 10px;
+
+
+
+
+        }
+
+        .link1:hover {
+            background-color: #ff6347;
+            border-radius: 30px;
+            color: white;
+        }
+
+        .banner-olho {
+            position: absolute;
+
+
+            color: white;
+            height: 100px;
+            width: 10%;
+            opacity: 0.5;
+            border-radius: 30px;
+
+            animation: 4s linear infinite movimenta-olho;
+        }
+
+        @keyframes movimenta-olho {
+            from {
+                margin-left: -20%;
+                transform: rotateZ(360deg);
+            }
+
+            to {
+                margin-left: 100%;
+                transform: rotateZ(0deg);
+            }
+        }
+
+        @keyframes movimento-texto {
+
+            0% {
+                margin-left: -100%;
+            }
+
+            55% {
+                margin-left: 50%;
+            }
+
+            75% {
+                margin-left: 110%;
+            }
+
+            100% {
+                margin-left: 0%;
+            }
+        }
+
+        .text-animation {
+            animation: 3s linear alternate movimento-texto;
+        }
+
+        .main {
+            background-color: rgb(31, 30, 30);
+            margin: 0%;
+            color: white;
+            display: grid;
+            grid-template-columns: 600px auto;
+            grid-template-rows: 100px 250px 100px 250px 200px 200px 200px;
+            justify-content: space-evenly;
+        }
+
+        .noticia-1 {
+            grid-row: 1 / 3;
+        }
+        .imagem-1{
+            grid-column: 2 / 2;
+            grid-row: 1 / 2;
+            
+            
+            
+        }
+        .img-franca{
+            border: 3px solid #ff6347;
+            border-radius: 10px 10px 10px 10px;
+            padding: 1%;
+            margin: 1%;
+        }
+        .texto-1{
+            font-size: 18px;
+    font-family: 'Source Sans Pro', sans-serif;
+            transition: 0.9s;
+
+        }
+        .titulo-1{
+            padding: 1%;
+            transition: 0.9;
+        }
+        .texto-1:hover, .titulo-1:hover{
+            color:  #ff6347;
+            font-size: 19px;
+            transition: 0.4;
+        }
+        .imagem-2{
+            grid-row: 4/6;
+        }
+        .titulo-2 {
+            grid-column: 2;
+            grid-row: 4/6;
+            display: grid;
+            align-items: center;
+            transition: 0.9;
+        }
+        .titulo-2:hover{
+            color:  #ff6347;
+            
+            transition: 0.4;
+        }
+        @keyframes spin {
+            0%{
+                transform: rotateZ(0deg);
+                margin-left: 0%;
+            }
+            25%{
+                transform: rotateZ(30deg);
+                margin-left: 10%;
+            }
+            50%{
+                transform: rotateZ(0deg);
+                margin-left: 100%;
+            }
+            100%{
+                transform: rotateZ(360deg);
+                margin-left: 0%;
+            }
+            
+        }
+        .spin{
+            width: 100px;
+            height: 100px;
+            background-color: #ff6347;
+            animation: 4s  infinite spin;
+            border-radius: 10px 10px 10px 10px;
+            display: grid;
+           justify-content: center;
+           padding: 3px;
+           grid-row: 7;
+           grid-column: 1;
+           
+        }
+        .spin2{
+            width: 100px;
+            height: 100px;
+            background-color: #ff6347;
+            animation: 4s  infinite spin;
+            border-radius: 10px 10px 10px 10px;
+            display: grid;
+           justify-content: center;
+           padding: 3px;
+           grid-row: 6;
+           grid-column: 1;
+        }
+        .t-3{
+            grid-column: 2;
+            grid-row: 7;
+            background-color: #ff6347;
+            color: white;
+            border-radius: 10px 10px 10px 10px;
+            width: 400px;
+            height: 100px;
+            display: grid;
+            align-items: center;
+            justify-content: center;
+        }
+        .t-4{
+            grid-column: 2;
+            grid-row: 6;
+            background-color: #ff6347;
+            color: white;
+            border-radius: 10px 10px 10px 10px;
+            width: 400px;
+            height: 100px;
+            display: grid;
+            align-items: center;
+            justify-content: center;
+        }
+        .roda-pe{
+            background-color: #ff6347;
+            width: 100%;
+            margin: 0%;
+            display: grid;
+            align-items: center;
+            justify-content: center;
+            height: 50px;
+            color: white;
+        
+        }
+        #card{
+            display: grid;
+            align-items: center;
+            justify-content: center;
+            grid-column: 1/3;
+            grid-row: 8/10;
+          
+        }
+        .issoai{
+            grid-column: 2;
+            grid-row: 2;
+        }
+
+
+         
+
+    </style>
+
+
+
+</head>
+
+<body>
+
+    <header>
+        <div  class="page-top">
+            <div class="banner-olho">
+                <img src="Imagem-de-Bola-PNG.png" alt="" width="100px">
+            
+            </div>
+            <div id="Logo"></div>
+            <div class="text-animation">
+                <div id="Titulo">FutNews</div>
+            </div>
+
+        </div>
+    </header>
+    <nav class="nav-central">
+        <nav>
+            <h1 class="logo" href="/">Fut News</h1>
+            <div class="mobile-menu">
+              <div class="line1"></div>
+              <div class="line2"></div>
+              <div class="line3"></div>
+            </div>
+            <ul class="nav-list">
+              <li><a href="index.html">Início</a></li>
+              <li><a href="championsL.html">Champions League</a></li>
+              <li><a href="libertadores.html">Libertadores</a></li>
+              <li><a href="copaDOmundo2.html">Copa Do Mundo</a></li>
+              <li><a href="brasilCopa.html">Brasil Na Copa Do Mundo</a></li>
+            </ul>
+          </nav>
+            
+          <script src="app.js"></script>
+    
+            
+
+        </div>
+
+
+    </nav>
+
+
+
+    <main>
+        <div class="main">
+            
+                <div class="titulo-1"><article><h2>FRANÇA campeão da copa do mundo de 2018!!!</h2></article></div>
+                <div class="texto-1">Naquele ano, a conquista foi o maior feito do futebol francês até então na competição. Não apenas pelo troféu em si, mas pela campanha. A França nunca havia chegado a uma final do torneio antes. E foi com Zidane, que a equipe se tornou competitiva no cenário mundial.
+                    Na grande final de 1998, o Brasil mostrou um futebol apático sendo derrotado pelos franceses por 3 a 0, com dois gols de Zidane e um de Petit. Antes do confronto, Ronaldo, principal destaque do time brasileiro na época, sofreu uma convulsão. Fato que talvez possa justificar sua atuação ter sido ofuscada por Zinedine, em um jogo dominado pela equipe europeia.</div>
+                <div class="imagem-1" > <aside> <img class="img-franca" src="frança capeta.jpg" alt="" width="550px" > </aside> </div>
+            
+                    <div class="imagem-2"  ><aside><img class="img-franca" src="vagner-love-ex-flamengo-Midtjylland.jpg" alt="" width="600px" ></aside>  </div>
+                    <div class="titulo-2"> <article><h2>Ex-Flamengo, Vagner Love encaminha retorno ao Brasil</h2>
+                </article></div>
+                    
+
+
+
+                <div class="spin">
+                     <img src="taca.png" alt="" width="95px" >
+                     
+                </div>
+                <div class="spin2">
+                    <img src="taca.png" alt="" width="95px" >
+                </div>
+                <div class="t-3" >
+                    <article>
+                        <h2>Campeão Champions: Real Madrid</h2>
+                    </article>
+                </div>
+                <div class="t-4" >
+                    <article>
+                        <h2>Campeão libertadores: Palmeiras</h2>
+                    </article>
+                </div>
+                
+                
+                
+
+              
+    </main>
+
+    <footer class="roda-pe" >
+        <p>Feito Por Gabriel Lima De Souza é Vítor Mendes Salomão</p>
+        
+    </footer>
+
+
+</body>
+
+</html>
